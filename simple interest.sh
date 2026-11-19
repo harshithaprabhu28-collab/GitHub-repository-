@@ -1,14 +1,16 @@
-# Simple Interest Calculator
+#!/bin/bash
 
-This project is a simple interest calculator that calculates the simple interest based on the principal amount, rate of interest, and time period.
+echo "Enter principal amount:"
+read principal
 
-## Formula
+echo "Enter rate of interest:"
+read rate
 
-Simple Interest = (Principal × Rate × Time) / 100
+echo "Enter time period in years:"
+read time
 
-Where:
-- Principal = Initial amount of money
-- Rate = Rate of interest per year
-- Time = Time period in years
+simple_interest=$((principal * rate * time / 100))
+total_amount=$((principal + simple_interest))
 
-The calculator takes these values as input and calculates the simple interest and total amount.
+echo "Simple Interest: $simple_interest"
+echo "Total Amount: $total_amount"
